@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=MedievalSharp&display=swap');
+
+:root {
+    --bg-color: #e8dfc4;
+    --panel-color: #d2b48c;
+    --text-color: #2b1b17;
+    --accent-color: #4a773c;
+    --accent-dark: #2c4c26;
+    --border-color: #846c3c;
+    --highlight: #ffd700;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'MedievalSharp', cursive;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 2em auto;
+    padding: 1.5em;
+    background: var(--panel-color);
+    border: 4px double var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    font-family: 'Press Start 2P', monospace;
+    background-color: var(--accent-color);
+    color: white;
+    border: 3px solid var(--accent-dark);
+    padding: 1em 2em;
+    margin: 1em 0;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px var(--accent-dark);
+}
+
+button:hover {
+    background-color: var(--highlight);
+    color: var(--text-color);
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+#settings {
+    background: #f3e5ab;
+    padding: 1em;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    margin-top: 1em;
+    font-size: 0.9em;
+}
+
+#settings label {
+    display: block;
+    margin: 0.3em 0;
+}
+
+#output {
+    margin-top: 2em;
+    background: white;
+    padding: 1em;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--accent-dark);
+    margin-top: 2em;
+}
+
+#settings {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.4s ease-in-out;
+    padding: 1em;
+    background: #f3e5ab;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    margin-top: 1em;
+    font-size: 0.9em;
+}
+
+#settings.collapsed {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    border: none;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Island Creator</title>
+</head>
+<body>
+  <div class="container">
+    <button id="generateBtn" onclick="generateIsland()">Create Island</button>
+
+    <div>
+      <button id="toggleButton" onclick="toggleSettings()">Show Settings</button>
+      <div id="settings">
+        <label><input type="checkbox" id="toggle-islandTypes" checked> Island Type</label><br>
+        <label><input type="checkbox" id="toggle-mysteries" checked> Central Mystery</label><br>
+        <label><input type="checkbox" id="toggle-inhabitants" checked> Inhabitants</label><br>
+        <label><input type="checkbox" id="toggle-factions" checked> Faction Interest</label><br>
+        <label><input type="checkbox" id="toggle-challenges" checked> Challenge</label><br>
+        <label><input type="checkbox" id="toggle-treasures" checked> Treasure</label>
+      </div>
+    </div>
+
+    <div id="output" style="margin-top: 2em;"></div>
+  </div>
+
+  <footer>
+    <p>Created by Caspar Wynne</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
