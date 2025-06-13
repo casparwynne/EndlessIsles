@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Endless Isles Map Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="data.js"></script>
+  <script type="module">
+    import { generateIsland } from './script.js';
+    window.generateIslandHTML = (seed) => {
+      const temp = document.createElement("div");
+      temp.innerHTML = generateIsland(seed, true);
+      return temp.innerHTML;
+    };
+  </script>
+</head>
+
+<body>
+  <div class="container">
+  <div class="header-container">
+    <h1 id="mapheader">Endless Isles Map Generator</h1>
+
+  </div><!-- Update the controls section in map.html -->
+          <a href="index.html">
+      <button>Return to Single Island Generator</button>
+    </a>
+  <div id="controls">
+
+    <div class="control-group">
+      <label for="map-size">Map Size:</label>
+      <select id="map-size">
+        <option value="small">Small (9×9)</option>
+        <option value="medium" selected>Medium (15×15)</option>
+        <option value="large">Large (21×21)</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label for="global-seed">World Seed:</label>
+      <input type="text" id="global-seed" placeholder="Enter seed (optional)">
+    </div>
+
+    <div class="control-group">
+      <button id="generate-map" class="map-button">Generate Map</button>
+    </div>
+
+    <div class="control-group">
+      <button id="download-map" class="map-button">Save Map</button>
+      <input type="file" id="load-map" accept="application/json" style="display: none;">
+      <label for="load-map" class="map-button">Load Map</label>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div id="map-grid"></div>
+  </div>
+  <div id="island-details"></div>
+  </div>
+
+  <script type="module" src="map-script.js"></script>
+</body>
+
+</html>

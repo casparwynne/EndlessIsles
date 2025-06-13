@@ -5,11 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css">
-    <title>Endless Isles</title>
+    <title>Endless Isles Generator</title>
 </head>
 
 <body>
     <div class="container">
+
+        <a href="map.html">
+            <button>Go to Other Page</button>
+        </a>
 
 
         <div class="isle-lore">
@@ -66,6 +70,11 @@
                 <li><strong>Save or copy</strong> the results for your campaign notes or share them with your crew.</li>
             </ol>
             <p><em>Tip: Add your own twists. The Isles reward creativity—and punish the complacent.</em></p>
+            <h4>Alternatively you can try the Map generator:</h4>
+            <p>You can generate a map, and islands.</p>
+            <a href="map.html">
+                <button>Go to Map Generator</button>
+            </a>
         </div>
 
         <div class="controls">
@@ -74,7 +83,7 @@
                 one.
                 <label for="seedInput">Seed:</label>
                 <input type="text" id="seedInput" placeholder="Enter seed (optional)">
-                <button onclick="generateFromInputSeed()">Use Seed</button>
+                <button id="generateBtn">Use Seed</button>
                 <div id="seedDisplay" class="seed-display"></div>
             </div>
         </div>
@@ -83,12 +92,15 @@
         <div id="settings" class="collapsed">
             <button onclick="resetSettings()" class="danger">Reset Settings</button>
             <label><input type="checkbox" id="toggle-islandTypes" checked> Island Type</label>
+            <label><input type="checkbox" id="toggle-features" checked> Features</label>
             <label><input type="checkbox" id="toggle-mysteries" checked> Central Mystery</label>
             <label><input type="checkbox" id="toggle-inhabitants" checked> Inhabitants</label>
             <label><input type="checkbox" id="toggle-factions" checked> Faction Interest</label>
             <label><input type="checkbox" id="toggle-challenges" checked> Challenge</label>
             <label><input type="checkbox" id="toggle-treasures" checked> Treasure</label>
-            <label><input type="checkbox" id="toggle-features" checked> Features</label>
+            <label><input type="checkbox" id="toggle-effects" checked> Effects</label>
+            <label><input type="checkbox" id="toggle-ambience" checked> Ambience</label>
+            <label><input type="checkbox" id="toggle-weather" checked> Weather</label>
             <label><input type="checkbox" id="toggle-size" checked> Island Size</label>
         </div>
 
@@ -105,7 +117,8 @@
         <p>Created by Caspar Wynne • The Endless Isles Generator</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="data.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>
