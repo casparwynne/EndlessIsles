@@ -665,6 +665,9 @@ button:hover, .map-button:hover {
   z-index: 10;
 }
 
+li {
+  display: none;
+}
 
 .header-container {
   display: flex;
