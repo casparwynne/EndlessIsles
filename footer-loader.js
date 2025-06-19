@@ -6,4 +6,3 @@ fetch('_footer.html')
 
   })
   .catch(error => console.error('Footer load error:', error));
-
