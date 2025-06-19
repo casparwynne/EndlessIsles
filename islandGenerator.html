@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Island Generator - Stormwall Isles</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>🪙 Island Generator</h1>
+    </header>
+    <div style="text-align: center;">
+      <button class="back-button" onclick="location.href='index.html'">
+        Back
+      </button>
+    </div>
+    <div class="controls">
+      <button id="toggleButton">Hide Settings</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <div id="settings">
+      <!-- Each checkbox maps to a settings key -->
+      <label><input type="checkbox" id="toggle-islandTypes" checked> Island Type</label>
+      <label><input type="checkbox" id="toggle-mysteries" checked> Mystery</label>
+      <label><input type="checkbox" id="toggle-inhabitants" checked> Inhabitants</label>
+      <label><input type="checkbox" id="toggle-factions" checked> Factions</label>
+      <label><input type="checkbox" id="toggle-challenges" checked> Challenges</label>
+      <label><input type="checkbox" id="toggle-treasures" checked> Treasure</label>
+      <label><input type="checkbox" id="toggle-features" checked> Features</label>
+      <label><input type="checkbox" id="toggle-size" checked> Size</label>
+      <label><input type="checkbox" id="toggle-effects" checked> Effects</label>
+      <label><input type="checkbox" id="toggle-ambience" checked> Ambience</label>
+      <label><input type="checkbox" id="toggle-weather" checked> Weather</label>
+    </div>
+
+    <div class="seed-control">
+      <label for="seedInput">Seed:</label>
+      <input type="text" id="seedInput" placeholder="Optional seed..." />
+      <button id="generateBtn">Generate</button>
+    </div>
+
+    <div class="seed-display" id="seedDisplay">Using seed: —</div>
+
+    <div class="action-buttons">
+      <button id="copyBtn">Copy</button>
+      <button id="printBtn">Print</button>
+    </div>
+
+    <div id="output"></div>
+    <div id="footer-container"></div>
+  </div>
+  <script src="footer-loader.js"></script>
+  <script type="module" src="main-island.js"></script>
+</body>
+
+</html>

@@ -1,4 +1,3 @@
-// Island data - expanded with more options
 export const islandTypes = [
     { label: "Jungle-covered volcanic isle", tags: ["volcanic", "jungle", "hot"] },
     { label: "Rocky, mist-shrouded cliffs", tags: ["rocky", "coastal", "foggy"] },
@@ -2715,7 +2714,7 @@ export const treasuresByType = {
         },
         {
             name: "Captain’s Final Share",
-            description: "A sealed strongbox beneath the captain’s floorboards—never claimed.",
+            description: "A sealed strongbox beneath the captain’s floorboards, never claimed.",
             rarity: "Uncommon",
             value: { gold: 40, silver: 60, copper: 90 },
             type: "hoard"
@@ -2750,7 +2749,7 @@ export const treasuresByType = {
         },
         {
             name: "Barbaric Plunderpile",
-            description: "Assorted loot from raids—mismatched currency, fetishes, and scrimshaw tokens.",
+            description: "Assorted loot from raids, mismatched currency, fetishes, and scrimshaw tokens.",
             rarity: "Uncommon",
             value: { gold: 20, silver: 65, copper: 95 },
             type: "hoard"
@@ -2771,7 +2770,7 @@ export const treasuresByType = {
         },
         {
             name: "The Betrayer’s Buried Gold",
-            description: "A hoard hidden in panic—still booby-trapped, but untouched for decades.",
+            description: "A hoard hidden in panic—still booby, trapped, but untouched for decades.",
             rarity: "Rare",
             value: { gold: 110, silver: 25, copper: 10 },
             type: "hoard"
@@ -3055,7 +3054,7 @@ export const treasuresByType = {
         },
         {
             name: "Deck of Vanishing Faces",
-            description: "A card deck where the faces change after each hand—some mimic real people.",
+            description: "A card deck where the faces change after each hand, some face cards mimic real people.",
             rarity: "Very Rare",
             value: { gold: 230, silver: 10, copper: 0 },
             type: "artifact"
@@ -3078,7 +3077,7 @@ export const treasuresByType = {
     curiosity: [
         {
             name: "Everbubbling Flask",
-            description: "A potion bottle that never stops fizzing—its liquid vanishes before it’s drunk.",
+            description: "A potion bottle that never stops fizzing, its liquid vanishes before it’s drunk.",
             rarity: "Uncommon",
             value: { gold: 10, silver: 15, copper: 25 },
             type: "curiosity"
@@ -3148,7 +3147,7 @@ export const treasuresByType = {
         },
         {
             name: "Driftwood Puzzle Box",
-            description: "Impossible to open until lost at sea—then opens on its own.",
+            description: "Impossible to open until lost at sea, then opens on its own.",
             rarity: "Uncommon",
             value: { gold: 30, silver: 25, copper: 30 },
             type: "curiosity"
@@ -3417,4 +3416,10 @@ export const defaultChallenges = [
     "Illusions cause explorers to turn on one another",
     "Even the plants seem to whisper warnings",
     "The ground occasionally exhales—hot, fetid air"
+];
+
+export const defaultWeather = [
+    { text: "Clear skies", emoji: "☀️" },
+    { text: "Partly cloudy", emoji: "⛅" },
+    { text: "Light rain", emoji: "🌧️" }
 ];

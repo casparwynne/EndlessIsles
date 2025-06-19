@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Map Generator - Stormwall Isles</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 id="mapheader">Map Generator</h1>
+    </header>
+    <div style="text-align: center;">
+      <button class="back-button" onclick="location.href='index.html'">
+        Back
+      </button>
+    </div>
+    <div id="controls">
+      <div class="control-group">
+        <label for="map-size">Map Size:</label>
+        <select id="map-size">
+          <option value="small">Small (9x9)</option>
+          <option value="medium" selected>Medium (15x15)</option>
+          <option value="large">Large (21x21)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="global-seed">Seed:</label>
+        <input type="text" id="global-seed" placeholder="Optional seed...">
+      </div>
+
+      <div class="button-row">
+        <button id="generate-map" class="map-button">Generate Map</button>
+        <button id="download-map" class="map-button" disabled>Download Map</button>
+        <label for="load-map" class="file-label">📂 Load Map</label>
+        <input type="file" id="load-map" class="file-input" />
+      </div>
+    </div>
+
+    <div class="map-container">
+      <div id="map-grid"></div>
+    </div>
+
+    <div id="island-details"></div>
+    <div id="footer-container"></div>
+  </div>
+
+  <!-- Simple test script to verify loading -->
+  <script>
+    console.log("HTML file script loaded");
+    window.addEventListener('DOMContentLoaded', () => {
+      console.log("DOM fully loaded");
+    });
+  </script>
+
+  <!-- Main app script - must be type="module" -->
+  <script type="module" src="./main-map.js"></script>
+  <script src="footer-loader.js"></script>
+
+</body>
+
+</html>

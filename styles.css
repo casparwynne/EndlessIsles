@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 2em auto;
   padding: 1.5em;
   background: var(--panel-color);
@@ -692,4 +692,176 @@ button:hover, .map-button:hover {
 
 .weatherEmoji {
   font-size:xx-large;
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.tool-card {
+  background-color: var(--panel-color);
+  border: 2px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  width: 280px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tool-card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.tool-card h4 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.2rem;
+}
+
+.tool-card p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+.back-button {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-family: 'MedievalSharp', cursive;
+}
+
+.back-button:hover {
+  background-color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+.island-controls {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 1.5em;
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+}
+
+.regenerate-btn, .use-seed-btn {
+  padding: 0.5em 1em;
+  background: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.seed-input {
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1em;
+  background-color: var(--panel-color);
+  color: var(--text-color);
+  border-top: 2px solid var(--border-color);
+  font-size: 0.9em;
+}
+
+#controls {
+  background: rgba(210, 180, 140, 0.8);
+  padding: 1.5em;
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 1em auto;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  align-items: start; /* Changed from end */
+}
+
+.button-row {
+  grid-column: 1 / -1; /* Make buttons span full width */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.button-row button,
+.button-row input[type="file"] {
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+/* Hide the default input */
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  padding: 0.8em 1.5em;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.85em;
+  background-color: var(--accent-color);
+  color: white;
+  border: 3px solid var(--accent-dark);
+  border-radius: 6px;
+  box-shadow: 0 4px var(--accent-dark);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.file-label:hover {
+  background-color: var(--highlight);
+  color: var(--text-color);
+  transform: translateY(-2px);
+}
+
+.file-label:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+/* Keep hidden */
+.file-input {
+  display: none;
+}
+
+#map-grid.fade-in,
+#island-details.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#map-grid,
+#island-details {
+  display: none;
 }
